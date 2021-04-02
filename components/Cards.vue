@@ -6,7 +6,8 @@
         <p v-else> 
             Shuffling deck... 
         </p>
-        <ul>
+        <button v-if="deck != null" @click="drawCards(1, deck.deck_id)" type="button">Draw Cards</button>
+        <ul v-if="deck != null">
             <li v-for="(card, i) in drawnCards" :key="i">
                 <img :src="card.image" width="50">
                 <span>
@@ -44,7 +45,7 @@
                     for (let i = 0; i < cards.length; i++) {
                         this.drawnCards.push(cards[i]);
                     }
-                }).catch(() => { alert('oops: error!') });
+                }).catch(() => { alert('The dealer was distracted try again!') });
             }
         }
     }
