@@ -19,7 +19,17 @@
 </template>
 
 <script>
-    export default {name: "Cards"}
+    export default {
+        name: "Cards",
+        mounted() {
+            this.showCards()  
+        },
+        methods: {
+            showCards() {
+                alert('Showing the cards');
+            }
+        }
+    }
 </script>
 
 <style>
