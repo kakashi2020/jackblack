@@ -6,7 +6,7 @@
         JackBlack
       </h1>
       <a href="https://www.linkedin.com/in/mauricio-groso" class="btn btn-link">
-        by Mauricio Groso
+        by Mauricio Groso (kakashi2020)
       </a>
     </div>
   </div>
