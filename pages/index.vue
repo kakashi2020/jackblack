@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
+      <h3 class="title">
         Jack Black
-      </h1>
+      </h3>
       <Cards />
       <p>
         <a href="https://www.linkedin.com/in/mauricio-groso" class="btn btn-primary">

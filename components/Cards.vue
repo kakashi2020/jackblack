@@ -21,12 +21,21 @@
 <script>
     export default {
         name: "Cards",
+        data() { 
+            return {
+                deck: {}
+            } 
+        },
         mounted() {
-            this.showCards()  
+            this.getDeck()  
         },
         methods: {
-            showCards() {
-                alert('Showing the cards');
+            getDeck() {
+                let uri = 'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1';
+                this.$axios.get(uri).then(response => {
+                    this.deck = response.data
+                }).catch(() => { alert('oops: error!') });
+
             }
         }
     }
