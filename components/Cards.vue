@@ -1,21 +1,29 @@
 <template>
-    <ul>  
-        <li>
-            Ace of Hearts
-        </li>
-        <li>
-            Ace of Spades 
-        </li>
-        <li>
-            Jack of Diamonds 
-        </li>
-        <li>
-            10 of Clovers
-        </li>
-        <li>
-            4 of Spades
-        </li>
-    </ul>
+    <div>
+        <p v-if="deck != null">
+            The deck has been shuffled 
+        </p>
+        <p v-else> 
+            Shuffling deck 
+        </p>
+        <ul>  
+            <li>
+                Ace of Hearts
+            </li>
+            <li>
+                Ace of Spades 
+            </li>
+            <li>
+                Jack of Diamonds 
+            </li>
+            <li>
+                10 of Clovers
+            </li>
+            <li>
+                4 of Spades
+            </li>
+        </ul>
+    </div>    
 </template>
 
 <script>
@@ -23,7 +31,7 @@
         name: "Cards",
         data() { 
             return {
-                deck: {}
+                deck: null
             } 
         },
         mounted() {
