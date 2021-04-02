@@ -6,6 +6,14 @@
         <p v-else> 
             Shuffling deck... 
         </p>
+        <ul>
+            <li v-for="(card, i) in drawnCards" :key="i">
+                <img :src="card.image" width="50">
+                <span>
+                    {{card.value}} of {{card.suit}}
+                </span>
+            </li>
+        </ul>
     </div>    
 </template>
 
