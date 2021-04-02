@@ -2,11 +2,14 @@
   <div class="container">
     <div>
       <h1 class="title">
-        JackBlack
+        Jack Black
       </h1>
-      <a href="https://www.linkedin.com/in/mauricio-groso" class="btn btn-link">
-        by Mauricio Groso (kakashi2020)
-      </a>
+      <Cards />
+      <p>
+        <a href="https://www.linkedin.com/in/mauricio-groso" class="btn btn-primary">
+          by Mauricio Groso (kakashi2020)
+        </a>
+      </p>
     </div>
   </div>
 </template>
