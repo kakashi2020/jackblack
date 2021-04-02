@@ -15,7 +15,7 @@
         data() { 
             return {
                 deck: null,
-                drawards: []
+                drawnCards: []
             } 
         },
         mounted() {
@@ -32,7 +32,10 @@
             drawCards(numCards, deckId) {
                 let uri = `https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=${numCards}`;
                 this.$axios.get(uri).then(response => {
-                    console.log(response.data)
+                    let cards = response.data.cards
+                    for (let i = 0; i < cards.length; i++) {
+                        this.drawnCards.push(cards[i]);
+                    }
                 }).catch(() => { alert('oops: error!') });
             }
         }
